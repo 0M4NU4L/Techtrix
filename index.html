@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite News Scroller</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Breaking News Scroller</h1>
+        <p class="subtitle">Disclaimer: All news items below are completely fictional</p>
+    </header>
+    
+    <main>
+        <div class="news-container" id="newsContainer">
+            <!-- News items will be dynamically inserted here -->
+        </div>
+        
+        <div class="loading-indicator" id="loadingIndicator">
+            <div class="spinner"></div>
+            <p>Loading more news...</p>
+        </div>
+    </main>
+    
+    <footer>
+        <p>Infinite Fake News Scroller | For demonstration purposes only</p>
+    </footer>
+    
+    <script src="news-data.js"></script>
+    <script src="scroller.js"></script>
+</body>
+</html>
