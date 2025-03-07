@@ -1,6 +1,3 @@
-// Fake news data generator
-
-// Arrays of content parts to randomly generate news
 const topics = [
     "Technology", "Politics", "Science", "Health", "Environment", 
     "Economy", "Entertainment", "Sports", "Education", "Space"
@@ -45,7 +42,6 @@ const sources = [
     "Industry Observer", "Tomorrow's Gazette"
 ];
 
-// Generate random date within the last year
 function getRandomDate() {
     const now = new Date();
     const pastYear = new Date();
@@ -61,7 +57,6 @@ function getRandomDate() {
     });
 }
 
-// Generate random fake news headline
 function generateFakeNewsItem() {
     const topic = topics[Math.floor(Math.random() * topics.length)];
     const company = companies[Math.floor(Math.random() * companies.length)];
@@ -72,7 +67,6 @@ function generateFakeNewsItem() {
     const benefit = benefits[Math.floor(Math.random() * benefits.length)];
     const source = sources[Math.floor(Math.random() * sources.length)];
     
-    // Create headline
     let title = '';
     const titleType = Math.floor(Math.random() * 3);
     
@@ -84,7 +78,6 @@ function generateFakeNewsItem() {
         title = `New ${topic} ${thing} ${action} by ${company} in ${country}`;
     }
     
-    // Create a longer excerpt
     const excerpt = `This ${adjective} development could ${benefit.toLowerCase()} ${topic.toLowerCase()} as we know it. Experts are calling this one of the most significant advancements in recent history.`;
     
     return {
@@ -95,7 +88,6 @@ function generateFakeNewsItem() {
     };
 }
 
-// Function to get batch of fake news
 function getFakeNewsBatch(count) {
     const newsBatch = [];
     for (let i = 0; i < count; i++) {
